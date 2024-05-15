@@ -25,7 +25,6 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  */
 class FairBillingTest {
 
-    List<UserBilling> userBills = null;
     String filePath = "src/test/java/com/bt/sessions.log";
 
     /**

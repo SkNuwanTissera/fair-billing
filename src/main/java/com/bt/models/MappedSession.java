@@ -13,18 +13,7 @@ public class MappedSession {
     private Date startTime;
     private Date endTime;
 
-    /**
-     * Constructs a MappedSession object with a specified username, start time, and end time.
-     *
-     * @param username  The username of the user.
-     * @param startTime The start time of the session.
-     * @param endTime   The end time of the session.
-     */
-    public MappedSession(String username, Date startTime, Date endTime) {
-        this.username = username;
-        this.startTime = startTime;
-        this.endTime = endTime;
-    }
+
 
     /**
      * Constructs a MappedSession object with a specified username.
@@ -33,24 +22,6 @@ public class MappedSession {
      * @param username The username of the user.
      */
     public MappedSession(String username) {
-        this.username = username;
-    }
-
-    /**
-     * Returns the username of the user.
-     *
-     * @return The username of the user.
-     */
-    public String getUsername() {
-        return username;
-    }
-
-    /**
-     * Sets the username of the user.
-     *
-     * @param username The username of the user.
-     */
-    public void setUsername(String username) {
         this.username = username;
     }
 

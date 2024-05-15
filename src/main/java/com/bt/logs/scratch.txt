@@ -1,0 +1,10 @@
+ALICE99 1st session -> 14:02:03 14:02:34 31
+ALICE99 2nd session -> 14:02:58 14:03:35 37
+ALICE99 3rd session -> 14:03:33 14:04:05 32
+ALICE99 4th session -> 14:02:03 14:04:23 140
+Total 240 secs,4 sessions
+
+CHARLIE 1st session -> 14:02:03 14:02:05 2
+CHARLIE 2nd session -> 14:03:02 14:03:37 35
+CHARLIE 3rd session -> 14:04:41 14:04:41 0
+Total 37 secs,3 sessions

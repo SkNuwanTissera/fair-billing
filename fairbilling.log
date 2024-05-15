@@ -1,0 +1,56 @@
+2024-05-15 09:21:20,808 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 09:21:20,816 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 09:22:15,983 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 09:22:15,991 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 09:22:22,053 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 09:22:22,062 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 09:36:17,317 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 09:36:17,325 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 09:40:56,107 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 09:40:56,115 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 09:59:48,176 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 09:59:48,185 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 10:09:12,082 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:09:12,086 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 10:30:55,733 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 10:30:55,743 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 10:37:30,262 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 10:37:30,271 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 10:37:38,471 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:37:38,475 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 10:38:40,584 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:38:40,588 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 10:39:56,292 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:39:56,295 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 10:57:21,057 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 10:57:21,065 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37
+2024-05-15 10:57:39,545 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:57:39,548 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 10:57:48,749 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:57:48,753 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 10:57:53,519 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:57:53,524 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 10:58:06,792 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:58:06,796 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 10:59:48,768 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 10:59:48,773 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 11:00:11,892 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 11:00:11,897 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 11:00:25,482 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 11:00:25,486 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 11:00:53,877 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 11:00:53,881 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 11:01:50,399 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:0003 ALICE99 Starttttttttt
+2024-05-15 11:01:50,407 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 11:12:18,177 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 11:12:18,182 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:02:34 ALICE@99 End
+2024-05-15 11:12:18,183 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:03:33 ALICE!99 Start
+2024-05-15 11:12:18,183 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:03:35 ALICE$99 End
+2024-05-15 11:12:18,184 INFO c.b.u.FairBillingUtils [main] Ignoring line: 14:03:37 "" End
+2024-05-15 11:13:21,530 ERROR c.b.u.FairBillingUtils [main] Ignoring line: 14:02:05 CHARLIE Enddddddd
+2024-05-15 11:13:21,534 ERROR c.b.u.FairBillingUtils [main] Ignoring line: 14:02:34 ALICE@99 End
+2024-05-15 11:13:21,534 ERROR c.b.u.FairBillingUtils [main] Ignoring line: 14:03:33 ALICE!99 Start
+2024-05-15 11:13:21,535 ERROR c.b.u.FairBillingUtils [main] Ignoring line: 14:03:35 ALICE$99 End
+2024-05-15 11:13:21,535 ERROR c.b.u.FairBillingUtils [main] Ignoring line: 14:03:37 "" End
+2024-05-15 11:13:59,422 INFO c.b.u.FairBillingUtils [main] ALICE99 4 240
+2024-05-15 11:13:59,431 INFO c.b.u.FairBillingUtils [main] CHARLIE 3 37

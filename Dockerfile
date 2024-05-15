@@ -1,18 +1,18 @@
-# Use an official Maven image as a build stage
-FROM maven:3.8.4-openjdk-11-slim AS build
-WORKDIR /app
-COPY . .
-# Run tests
-RUN mvn test
-# Build the application
-RUN mvn -B package --file pom.xml
+# Use a base image with JDK and Maven pre-installed
+FROM maven:3.8.4-openjdk-11-slim
 
-# Use AdoptOpenJDK as a runtime image
-FROM adoptopenjdk/openjdk11:jdk-11.0.12_7-alpine
+# Install bash
+RUN apt-get update && apt-get install -y bash && rm -rf /var/lib/apt/lists/*
+
+# Set the working directory in the container
 WORKDIR /app
-# Copy the built JAR file from the build stage
-COPY --from=build /app/target/*.jar app.jar
-# Expose port 8080
-EXPOSE 8080
-# Run the JAR file
-CMD ["java", "-jar", "app.jar"]
+
+# Copy the Maven project files
+COPY pom.xml .
+COPY src ./src
+
+# Build and run tests
+RUN mvn -B clean package
+
+# Default command to execute when the container starts
+CMD ["bash"]

@@ -7,15 +7,11 @@ RUN apt-get update && apt-get install -y bash
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the Maven project files
-COPY pom.xml .
-COPY src ./src
+# Copy the whole project
+COPY . /app
 
-# Install application/test dependencies and build the project
-RUN mvn -B clean install
+# Run Maven with tests
+RUN mvn clean install
 
-# Run tests
-RUN mvn test
-
-# Set the entry point to your application's main class
-ENTRYPOINT ["java", "-cp", "target/classes:target/dependency/*", "com.bt.FairBilling"]
+# Command to run your application when the container starts
+CMD ["java", "-jar", "target/fair-billing-1.0-SNAPSHOT-jar-with-dependencies.jar", "src/main/java/com/bt/logs/sessions.log"]

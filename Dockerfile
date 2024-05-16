@@ -1,5 +1,5 @@
 # Use a base image with JDK and Maven pre-installed
-FROM maven:3.8.4-openjdk-11-slim
+FROM maven:3.8.4-openjdk-17-slim
 
 # Install bash if not present
 RUN apt-get update && apt-get install -y bash

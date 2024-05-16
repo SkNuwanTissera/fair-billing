@@ -240,8 +240,8 @@ public class FairBillingUtils {
 
     /**
      * Validates a username.
-     * @param username
-     * @return
+     * @param username The username to validate
+     * @return true if the username is valid, false otherwise
      */
     private static boolean isValidUsername(String username) {
         return USERNAME_PATTERN.matcher(username).matches();

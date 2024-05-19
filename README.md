@@ -1,4 +1,8 @@
-[![Java CI with Maven](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/maven.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/maven.yml)
+[![Build](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/maven.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/maven.yml)
+[![CodeQL](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/codeql.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/codeql.yml)
+[![Docker Image CI](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/docker-image.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/docker-image.yml)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 # Fair Billing
 
 Fair Billing is a Java program designed to calculate the total duration and number of sessions for users based on session start and end times provided in a log file. It is particularly useful for hosted application providers who charge based on session duration.

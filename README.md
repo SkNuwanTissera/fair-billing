@@ -1,3 +1,4 @@
+[![Java CI with Maven](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/maven.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/maven.yml)
 # Fair Billing
 
 Fair Billing is a Java program designed to calculate the total duration and number of sessions for users based on session start and end times provided in a log file. It is particularly useful for hosted application providers who charge based on session duration.

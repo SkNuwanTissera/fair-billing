@@ -94,3 +94,25 @@ The output shows the user name, session count, and total duration for each user.
 2024-05-16 23:06:18,712 ERROR c.b.u.FairBillingUtils [main] Ignoring line: 14:03:35 ALICE$99 End
 ```
 
+## Log4J Logging
+The application uses Log4J for logging. The log file (fairbilling.log) will be generated in the root directory showing the user name, session count, and total duration for each user. It also logs any lines that are ignored due to incorrect formatting.
+
+### Configuration
+The log4j2.xml file in the resources directory contains the configuration for Log4J. You can modify this file to change the logging level, output format, and log file location.
+
+## Unit Tests
+The project includes JUnit tests to verify the functionality of the FairBillingUtils class. You can run the tests using Maven:
+
+```bash
+mvn test
+```
+
+** Negative test cases are also included to test the handling of invalid log file entries.
+
+## Workflow
+The project includes a GitHub Actions workflow that runs the Maven build and test process whenever a push is made to the main branch. The status of the workflow can be viewed in the Actions tab of the GitHub repository.
+
+Refer `.workflow/` for the workflow configuration. 
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

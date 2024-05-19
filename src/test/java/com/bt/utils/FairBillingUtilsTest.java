@@ -1,5 +1,6 @@
-package com.bt;
+package com.bt.utils;
 
+import com.bt.FairBilling;
 import com.bt.exceptions.FairBillingException;
 import com.bt.models.Session;
 import com.bt.records.UserBilling;
@@ -23,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * This class contains test cases for the FairBilling application.
  * It tests the functionality of the FairBillingUtils class methods.
  */
-class FairBillingTest {
+class FairBillingUtilsTest {
 
     String filePath = "src/test/java/com/bt/sessions.log";
 

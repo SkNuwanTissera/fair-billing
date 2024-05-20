@@ -48,6 +48,69 @@ Fair Billing is a Java program designed to calculate the total duration and numb
 
 4. View the generated log file (fairbilling.log) in root showing user names, session counts, and total durations.
 
+## API
+
+### Overview
+
+The Fair Billing API is a Spring Boot application that provides a REST API for calculating the total duration and number of sessions for users based on session start and end times provided in a log file.
+
+### API Endpoint
+
+#### GET /api/fair-billing
+
+This endpoint calculates the total duration and number of sessions for each user based on session start and end times provided in a log file.
+
+##### Parameters
+
+- `logFilePath`: The path to the log file. This is a required parameter.
+
+##### Response
+
+The response is a list of `UserBilling` objects. Each `UserBilling` object contains the following fields:
+
+- `username`: The username of the user.
+- `totalSessions`: The total number of sessions for the user.
+- `totalBillableSeconds`: The total duration of all sessions for the user in seconds.
+
+##### Example
+
+Request:
+
+```
+GET /api/fair-billing?logFilePath=/path/to/logfile.log
+```
+
+Response:
+
+```json
+[
+    {
+        "username": "ALICE99",
+        "totalSessions": 4,
+        "totalBillableSeconds": 240
+    },
+    {
+        "username": "CHARLIE",
+        "totalSessions": 3,
+        "totalBillableSeconds": 37
+    }
+]
+```
+
+### Error Handling
+
+If the `logFilePath` parameter is not provided or the file cannot be read, the API will return a `400 Bad Request` status code with an error message.
+
+### Running the Application
+
+To run the Spring Boot application, you can use the Spring Boot Maven plugin:
+
+```bash
+mvn spring-boot:run
+```
+
+This will start the application on port 8080. You can then access the API at `http://localhost:8080/api/fair-billing`.
+
 ## Docker
 
 Pre-requisites: Docker installed on your machine/vm.
@@ -117,6 +180,18 @@ mvn test
 The project includes a GitHub Actions workflow that runs the Maven build and test process whenever a push is made to the main branch. The status of the workflow can be viewed in the Actions tab of the GitHub repository.
 
 Refer `.workflow/` for the workflow configuration. 
+
+### CI/CD
+The project includes a GitHub Actions workflow that builds the project, runs unit tests, and generates a Docker image whenever a new release is created. The status of the workflow can be viewed in the Actions tab of the GitHub repository.
+
+### Docker Image CI
+The project includes a GitHub Actions workflow that builds a Docker image and pushes it to Docker Hub whenever a new release is created. The status of the workflow can be viewed in the Actions tab of the GitHub repository.
+
+### CodeQL
+The project includes a CodeQL workflow that analyzes the codebase for potential security vulnerabilities and coding errors. The status of the workflow can be viewed in the Actions tab of the GitHub repository.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

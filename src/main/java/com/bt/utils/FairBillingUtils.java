@@ -11,6 +11,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -246,4 +247,5 @@ public class FairBillingUtils {
     private static boolean isValidUsername(String username) {
         return USERNAME_PATTERN.matcher(username).matches();
     }
+
 }

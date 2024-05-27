@@ -46,9 +46,9 @@ jobs:
 #            exit 1
 #          fi
 #        shell: bash
-
-      - name: Upload coverage report
-        uses: actions/upload-artifact@v2
-        with:
-          name: jacoco-report
-          path: target/site/jacoco
+#
+#      - name: Upload coverage report
+#        uses: actions/upload-artifact@v2
+#        with:
+#          name: jacoco-report
+#          path: target/site/jacoco

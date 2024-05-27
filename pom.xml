@@ -108,7 +108,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-checkstyle-plugin</artifactId>
-                <version>3.1.2</version>
+                <version>3.3.1</version>
                 <executions>
                     <execution>
                         <phase>validate</phase>
@@ -118,7 +118,8 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <configLocation>checkstyle.xml</configLocation>
+                    <consoleOutput>true</consoleOutput>
+                    <configLocation>src/main/resources/checkstyle.xml</configLocation>
                 </configuration>
             </plugin>
         </plugins>

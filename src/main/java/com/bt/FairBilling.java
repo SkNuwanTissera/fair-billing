@@ -34,13 +34,13 @@ import org.apache.logging.log4j.Logger;
  * <p>
  */
 public class FairBilling {
-    private static final Logger logger = LogManager.getLogger(FairBilling.class);
+    private static final Logger LOGGER = LogManager.getLogger(FairBilling.class);
     public static void main(String[] args) {
         // This block of code checks if the user has provided exactly one argument when running the program.
         // The argument should be the path to the log file that the program will process.
         // If the user does not provide exactly one argument, the program will print an error message and terminate.
         if (args.length != 1) {
-            logger.info("Please provide the path to the log file as an argument.");
+            LOGGER.info("Please provide the path to the log file as an argument.");
             return;
         }
 

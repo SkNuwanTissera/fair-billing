@@ -11,7 +11,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.net.URLEncoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -27,10 +26,8 @@ import java.util.regex.Pattern;
  */
 public class FairBillingUtils {
 
-    private static final Logger logger = LogManager.getLogger(FairBillingUtils.class);
+    private static final Logger LOGGER = LogManager.getLogger(FairBillingUtils.class);
     private static final Pattern USERNAME_PATTERN = Pattern.compile("[a-zA-Z0-9]+");
-
-
 
     /**
      * Reads a log file and returns a list of sessions.
@@ -72,7 +69,7 @@ public class FairBillingUtils {
                         // If the action is not a start and not an end, the line is invalid.
                         if (!start && !action.equals("End")) {
                             // Print a message and ignore the line.
-                            logger.error("Ignoring line: " + line);
+                            LOGGER.error("Ignoring line: " + line);
                             System.err.println("Invalid action: " + action);
                             valid = false;
                             continue; // Skip this entry
@@ -80,7 +77,7 @@ public class FairBillingUtils {
 
                         // Validate username
                         if (!isValidUsername(username)) {
-                            logger.error("Ignoring line: " + line);
+                            LOGGER.error("Ignoring line: " + line);
                             System.err.println("Invalid username: " + username);
                             valid = false;
                             continue; // Skip this entry
@@ -91,7 +88,7 @@ public class FairBillingUtils {
 
                     } catch (ParseException e) {
                         // If the timestamp cannot be parsed, print a message and ignore the line.
-                        logger.error("Ignoring line: " + line);
+                        LOGGER.error("Ignoring line: " + line);
                         System.err.println("Invalid timestamp: " + parts[0]);
                     }
                 }
@@ -235,7 +232,7 @@ public class FairBillingUtils {
      */
     public static void printBills(List<UserBilling> userBills) {
         for (UserBilling bill : userBills) {
-            logger.info("{} {} {}", bill.username(), bill.totalSessions(), bill.totalBillableSeconds());
+            LOGGER.info("{} {} {}", bill.username(), bill.totalSessions(), bill.totalBillableSeconds());
         }
     }
 

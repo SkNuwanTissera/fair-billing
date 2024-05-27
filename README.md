@@ -161,6 +161,19 @@ The output shows the user name, session count, and total duration for each user.
 2024-05-16 23:06:18,712 ERROR c.b.u.FairBillingUtils [main] Ignoring line: 14:03:35 ALICE$99 End
 ```
 
+## Assumptions
+- The log file follows chronological order based on time.
+- The log file contains logs for one day only.
+
+> Example for an error log file that contains logs for two days:
+```
+23:52:15 EMILY Start
+23:52:20 OLIVIA End
+00:51:12 SAMUEL Start
+00:51:18 EMILY End
+00:51:25 OLIVIA End
+```
+
 ## Log4J Logging
 The application uses Log4J for logging. The log file (fairbilling.log) will be generated in the root directory showing the user name, session count, and total duration for each user. It also logs any lines that are ignored due to incorrect formatting.
 

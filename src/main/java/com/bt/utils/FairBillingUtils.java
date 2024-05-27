@@ -235,7 +235,7 @@ public class FairBillingUtils {
      */
     public static void printBills(List<UserBilling> userBills) {
         for (UserBilling bill : userBills) {
-            logger.info(bill.username() + " " + bill.totalSessions() + " " + bill.totalBillableSeconds());
+            logger.info("{} {} {}", bill.username(), bill.totalSessions(), bill.totalBillableSeconds());
         }
     }
 

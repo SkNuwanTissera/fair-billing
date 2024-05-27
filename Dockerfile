@@ -14,4 +14,4 @@ COPY . /app
 RUN mvn clean install
 
 # Command to run your application when the container starts
-CMD ["java", "-jar", "target/fair-billing-1.0-SNAPSHOT-jar-with-dependencies.jar", "src/main/java/com/bt/logs/sessions.log"]
+CMD ["java", "-jar", "target/*-jar-with-dependencies.jar", "src/main/java/com/bt/logs/sessions.log"]

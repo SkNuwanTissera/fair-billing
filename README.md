@@ -16,7 +16,7 @@ Fair Billing is a Java program designed to calculate the total duration and numb
 
 ## Requirements
 
-- Java 8 or higher
+- Java 17 or higher
 - Maven for building the project
 - Log file containing session start and end times (in the format HH:MM:SS)
 

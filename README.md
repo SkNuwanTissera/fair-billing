@@ -1,6 +1,6 @@
-[![Build](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/maven.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/build-ci.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/build-ci.yml)
 [![CodeQL](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/codeql.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/codeql.yml)
-[![Docker Image CI](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/docker-image.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/docker-image.yml)
+[![Docker Image CI](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/docker-ci.yml/badge.svg)](https://github.com/SkNuwanTissera/fair-billing/actions/workflows/docker-ci.yml)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 # Fair Billing

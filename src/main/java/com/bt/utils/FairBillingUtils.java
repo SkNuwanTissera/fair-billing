@@ -15,6 +15,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -63,15 +64,11 @@ public class FairBillingUtils {
                         // Check if the action is a start.
                         boolean start = action.equals("Start");
 
-                        // Assume the line is valid initially.
-                        boolean valid = true;
-
                         // If the action is not a start and not an end, the line is invalid.
                         if (!start && !action.equals("End")) {
                             // Print a message and ignore the line.
                             LOGGER.error("Ignoring line: " + line);
                             System.err.println("Invalid action: " + action);
-                            valid = false;
                             continue; // Skip this entry
                         }
 
@@ -79,12 +76,11 @@ public class FairBillingUtils {
                         if (!isValidUsername(username)) {
                             LOGGER.error("Ignoring line: " + line);
                             System.err.println("Invalid username: " + username);
-                            valid = false;
                             continue; // Skip this entry
                         }
 
                         // Add the session to the list.
-                        sessions.add(new Session(username, timestamp, start, valid));
+                        sessions.add(new Session(username, timestamp, start));
 
                     } catch (ParseException e) {
                         // If the timestamp cannot be parsed, print a message and ignore the line.
@@ -101,6 +97,20 @@ public class FairBillingUtils {
 
         // Return the list of sessions.
         return sessions;
+    }
+
+    /**
+     * Reads multiple log files and returns a list of sessions.
+     * @param filePaths The paths to the log files.
+     * @return A list of sessions.
+     */
+    public static List<Session> readLogFiles(List<String> filePaths) {
+        List<Session> mergedSessions = new ArrayList<>();
+        for (String filePath : filePaths) {
+            mergedSessions.addAll(readLogFile(filePath));
+        }
+        mergedSessions.sort(Comparator.comparing(s -> s.timestamp));
+        return mergedSessions;
     }
 
     /**
@@ -121,25 +131,25 @@ public class FairBillingUtils {
         Date lastSessionTime = sessions.get(sessions.size() - 1).timestamp;
 
         // Map the sessions by username
-        Map<String, List<MappedSession>> map = mapSessions(sessions);
+        Map<String, List<MappedSession>> mappedSessions = mapSessions(sessions);
         List<UserBilling> results = new ArrayList<>();
 
         // Calculate the total billable time for each user
-        for (String userid : map.keySet()) {
+        for (String userid : mappedSessions.keySet()) {
             int total = 0;
             int numberOfSessions = 0;
-            for (MappedSession us : map.get(userid)) {
+            for (MappedSession mappedSession : mappedSessions.get(userid)) {
                 numberOfSessions++;
                 // If the session start time is null, set it to the first session time
-                if (us.getStartTime() == null) {
-                    us.setStartTime(firstSessionTime);
+                if (mappedSession.getStartTime() == null) {
+                    mappedSession.setStartTime(firstSessionTime);
                 }
                 // If the session end time is null, set it to the last session time
-                if (us.getEndTime() == null) {
-                    us.setEndTime(lastSessionTime);
+                if (mappedSession.getEndTime() == null) {
+                    mappedSession.setEndTime(lastSessionTime);
                 }
                 // Calculate the duration of the session in seconds
-                total += (int) ((us.getEndTime().getTime() - us.getStartTime().getTime()) / 1000);
+                total += (int) ((mappedSession.getEndTime().getTime() - mappedSession.getStartTime().getTime()) / 1000);
             }
             // Add a new UserBilling object to the results list
             results.add(new UserBilling(userid, numberOfSessions, total));
@@ -167,11 +177,11 @@ public class FairBillingUtils {
         // Iterate over each session in the list.
         for (Session session : sessions) {
             // Get the list of MappedSession objects associated with the username in the session.
-            List<MappedSession> mappedSessions = userSessionMap.get(session.username);
+            List<MappedSession> userSessionList = userSessionMap.get(session.username);
             // Map the session to a MappedSession object.
-            mappedSessions = mapSession(mappedSessions, session);
+            userSessionList = mapSession(userSessionList, session);
             // Put the updated list of MappedSession objects back into the map.
-            userSessionMap.put(session.username, mappedSessions);
+            userSessionMap.put(session.username, userSessionList);
         }
         // Return the map of sessions by username.
         return userSessionMap;

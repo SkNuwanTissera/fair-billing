@@ -14,22 +14,6 @@ public class Session {
     public String username;
     public Date timestamp;
     public boolean start;
-    public boolean valid;
-
-    /**
-     * Constructs a Session object with a specified username, timestamp, start flag, and valid flag.
-     *
-     * @param username  The username of the user.
-     * @param timestamp The timestamp of the session.
-     * @param start     The start flag of the session.
-     * @param valid     The valid flag of the session.
-     */
-    public Session(String username, Date timestamp, boolean start, boolean valid) {
-        this.username = username;
-        this.timestamp = timestamp;
-        this.start = start;
-        this.valid = valid;
-    }
 
     /**
      * Constructs a Session object with a specified username, timestamp, start flag
